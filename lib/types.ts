@@ -33,3 +33,15 @@ export interface CategorySummary {
 
 export type FilterType = "all" | "income" | "expense";
 export type ThemeMode = "light" | "dark";
+export type BudgetStatus = "SAFE" | "WARNING" | "EXCEEDED";
+
+export interface BudgetSummaryResponse {
+  budget: number;
+  totalExpense: number;
+  remainingBudget: number;
+  percentage: number;
+  status: BudgetStatus;
+  month: number;
+  year: number;
+  hasBudget: boolean;
+}
